@@ -3,9 +3,8 @@
 ## 簡介
 這是一個使用 Python 開發的自動化工具，能透過 **LINE 桌面版** 自動發送訊息。  
 支援功能：
-- 多人同時發送（從聊天清單最上方開始）
+- 多人定時自動發送（從聊天清單最上方開始）
 - 使用 JSON 設定訊息與時間
-- 定時自動發送（排程）
 
 ## 安裝
 1. 下載專案
@@ -25,7 +24,15 @@
      {"datetime": "2025-09-05 18:30", "message": "這是 9/5 自動訊息"},
      {"datetime": "2025-09-08 09:00", "message": "早安，這是 9/8 訊息"}
    ]
-3. 執行程式
+
+3.編輯 main.py 中的 RECIPIENT_COUNT 與 LINE_PATH 變數
+   ```python
+   # LINE路徑
+   LINE_PATH = r"C:\Users\User\AppData\Local\LINE\bin\LineLauncher.exe"
+   # 預設發送對話數量 (從上往下數)
+   RECIPIENT_COUNT = 1
+   ```
+4. 執行程式
    ```bash
    python main.py
 ## 注意事項

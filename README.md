@@ -10,5 +10,5 @@
 ## 安裝
 1. 下載專案
    ```bash
-   git clone https://github.com/<你的帳號>/line-message-bot.git
+   git clone https://github.com/mio1017/line-auto-sender.git
    cd line-message-bot

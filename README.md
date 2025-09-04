@@ -25,13 +25,13 @@
      {"datetime": "2025-09-08 09:00", "message": "早安，這是 9/8 訊息"}
    ]
 
-3.編輯 main.py 中的 RECIPIENT_COUNT 與 LINE_PATH 變數
+3. 編輯 main.py 中的 RECIPIENT_COUNT 與 LINE_PATH 變數
    ```python
    # LINE路徑
    LINE_PATH = r"C:\Users\User\AppData\Local\LINE\bin\LineLauncher.exe"
    # 預設發送對話數量 (從上往下數)
    RECIPIENT_COUNT = 1
-   ```
+   
 4. 執行程式
    ```bash
    python main.py

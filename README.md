@@ -9,7 +9,7 @@
 ## 安裝
 1. 下載專案
    ```bash
-   git clone https://github.com/mio1017/line-auto-sender.git
+   git clone https://github.com/BK1017/line-auto-sender.git
    cd line-message-bot
 2. 安裝套件
    ```bash

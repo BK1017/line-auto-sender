@@ -12,6 +12,7 @@
    git clone https://github.com/BK1017/line-auto-sender.git
    cd line-message-bot
 2. 安裝套件
+
    若沒有安裝Python，請到[這裡](https://www.python.org/downloads/)
    ```bash
    pip install -r requirements.txt

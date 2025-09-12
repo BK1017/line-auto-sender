@@ -11,13 +11,22 @@ RECIPIENT_COUNT = 1
 JSON_PATH = "messages.json"
 
 # === 啟動或連線 LINE ===
-try:
-    app = Application(backend="uia").connect(title_re="LINE")
-except:
-    app = Application(backend="uia").start(LINE_PATH)
-    time.sleep(5)
-    app = Application(backend="uia").connect(title_re="LINE")
-
+def check_line_running(retry=3, delay=5):
+    for attempt in range(retry):
+        try:
+            app = Application(backend="uia").connect(title_re="LINE")
+            return app
+        except Exception as e:
+            if attempt == 0:
+                try:
+                    app = Application(backend="uia").start(LINE_PATH)
+                    time.sleep(delay)
+                except Exception as start_err:
+                    print(f"啟動 LINE 失敗: {start_err}")
+            time.sleep(delay)
+    print("連線或啟動 LINE 失敗，請確認 LINE 是否安裝或路徑正確。")
+    return None
+app = check_line_running()
 win = app.window(title_re="LINE")
 win.set_focus()
 
